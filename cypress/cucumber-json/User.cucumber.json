@@ -1,0 +1,302 @@
+[
+  {
+    "keyword": "Feature",
+    "name": "ReqRes User API",
+    "line": 1,
+    "id": "reqres-user-api",
+    "tags": [],
+    "uri": "User.feature",
+    "elements": [
+      {
+        "id": "reqres-user-api;as-an-reqres-user-i-want-to-get-details-of-all-users-so-that-i-can-see-what-users-exist",
+        "keyword": "Scenario",
+        "line": 3,
+        "name": "As an reqres user I want to get details of all users so that I can see what users exist",
+        "tags": [],
+        "type": "scenario",
+        "steps": [
+          {
+            "arguments": [],
+            "keyword": "Given ",
+            "line": 4,
+            "name": "I have the GET users end point",
+            "result": {
+              "status": "passed",
+              "duration": 169000000
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "When ",
+            "line": 5,
+            "name": "I send a request to GET users",
+            "result": {
+              "status": "passed",
+              "duration": 91000000
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Then ",
+            "line": 6,
+            "name": "response status code equals 200",
+            "result": {
+              "status": "passed",
+              "duration": 2000000
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "And ",
+            "line": 7,
+            "name": "response body contains all users",
+            "result": {
+              "status": "passed",
+              "duration": 2000000
+            }
+          }
+        ]
+      },
+      {
+        "id": "reqres-user-api;as-an-reqres-user-i-want-to-get-a-single-user-so-that-i-can-see-information-about-the-users",
+        "keyword": "Scenario",
+        "line": 9,
+        "name": "As an reqres user I want to get a single user so that I can see information about the users",
+        "tags": [],
+        "type": "scenario",
+        "steps": [
+          {
+            "arguments": [],
+            "keyword": "Given ",
+            "line": 10,
+            "name": "I have the GET single user end point with the id of a user that exists",
+            "result": {
+              "status": "passed",
+              "duration": 12000000
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "When ",
+            "line": 11,
+            "name": "I send a request to get a single user",
+            "result": {
+              "status": "passed",
+              "duration": 83000000
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Then ",
+            "line": 12,
+            "name": "response status code equals 200",
+            "result": {
+              "status": "passed",
+              "duration": 2000000
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "And ",
+            "line": 13,
+            "name": "response body contains the requested User",
+            "result": {
+              "status": "passed",
+              "duration": 7000000
+            }
+          }
+        ]
+      },
+      {
+        "id": "reqres-user-api;as-an-reqres-user-when-i-make-a-request-for-a-user-that-does-not-exist-i-want-to-ensure-that-the-server-responds-with-a-404-error",
+        "keyword": "Scenario",
+        "line": 15,
+        "name": "As an reqres user when I make a request for a user that does not exist I want to ensure that the server responds with a 404 error",
+        "tags": [],
+        "type": "scenario",
+        "steps": [
+          {
+            "arguments": [],
+            "keyword": "Given ",
+            "line": 16,
+            "name": "I have the GET single user end point with the id of a user that does not exist",
+            "result": {
+              "status": "passed",
+              "duration": 12000000
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "When ",
+            "line": 17,
+            "name": "I send a request to get a single user",
+            "result": {
+              "status": "passed",
+              "duration": 129000000
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Then ",
+            "line": 18,
+            "name": "response status code equals 404",
+            "result": {
+              "status": "passed",
+              "duration": 3000000
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "And ",
+            "line": 19,
+            "name": "response body contains an empty object",
+            "result": {
+              "status": "passed",
+              "duration": 3000000
+            }
+          }
+        ]
+      },
+      {
+        "id": "reqres-user-api;as-an-reqres-user-i-want-to-be-able-to-create-a-user-account-so-that-i-can-login-to-the-reqres-website",
+        "keyword": "Scenario",
+        "line": 21,
+        "name": "As an reqres user I want to be able to create a user account so that I can login to the reqres website",
+        "tags": [],
+        "type": "scenario",
+        "steps": [
+          {
+            "arguments": [],
+            "keyword": "Given ",
+            "line": 22,
+            "name": "I have the create new user end point",
+            "result": {
+              "status": "passed",
+              "duration": 11000000
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "When ",
+            "line": 23,
+            "name": "I send a request containing details of the new user",
+            "result": {
+              "status": "passed",
+              "duration": 94000000
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Then ",
+            "line": 24,
+            "name": "response status code equals 201",
+            "result": {
+              "status": "passed",
+              "duration": 2000000
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "And ",
+            "line": 25,
+            "name": "response body contains the new user",
+            "result": {
+              "status": "passed",
+              "duration": 6000000
+            }
+          }
+        ]
+      },
+      {
+        "id": "reqres-user-api;as-an-reqres-user-i-want-to-be-able-to-update-an-existing-user-account-so-that-i-can-make-changes-to-the-users-details",
+        "keyword": "Scenario",
+        "line": 27,
+        "name": "As an reqres user I want to be able to update an existing user account so that I can make changes to the users details",
+        "tags": [],
+        "type": "scenario",
+        "steps": [
+          {
+            "arguments": [],
+            "keyword": "Given ",
+            "line": 28,
+            "name": "I have the update user end point with the user id of the user I want to update",
+            "result": {
+              "status": "passed",
+              "duration": 13000000
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "When ",
+            "line": 29,
+            "name": "I send a request containing details of the user field I want to update",
+            "result": {
+              "status": "passed",
+              "duration": 118000000
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Then ",
+            "line": 30,
+            "name": "response status code equals 200",
+            "result": {
+              "status": "passed",
+              "duration": 3000000
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "And ",
+            "line": 31,
+            "name": "response body contains the updated user",
+            "result": {
+              "status": "passed",
+              "duration": 4000000
+            }
+          }
+        ]
+      },
+      {
+        "id": "reqres-user-api;as-an-reqres-user-i-want-to-delete-a-user-so-that-the-user-is-removed-from-the-system",
+        "keyword": "Scenario",
+        "line": 33,
+        "name": "As an reqres user I want to delete a user so that the user is removed from the system",
+        "tags": [],
+        "type": "scenario",
+        "steps": [
+          {
+            "arguments": [],
+            "keyword": "Given ",
+            "line": 34,
+            "name": "I have the delete user end point with the user id of the user I want to delete",
+            "result": {
+              "status": "passed",
+              "duration": 11000000
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "When ",
+            "line": 35,
+            "name": "I send a request to delete the user",
+            "result": {
+              "status": "passed",
+              "duration": 133000000
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Then ",
+            "line": 36,
+            "name": "response status code equals 204",
+            "result": {
+              "status": "passed",
+              "duration": 3000000
+            }
+          }
+        ]
+      }
+    ]
+  }
+]
